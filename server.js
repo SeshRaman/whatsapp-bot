@@ -11,12 +11,14 @@ const authToken = '13ade1dcc7ec0e72092955f8ebfc75a2';
 const client = twilio(accountSid, authToken);
 
 // Direct Line Token for Microsoft Bot
-const directLineToken = 'A-oSxjR5Ll4.DXNUlIYP2kLrho6gdqg3f-cC-lHvUafbjPy4PoINaTE';  // Use the Direct Line Token you have
+const directLineToken = 'OrMhcxSuZkM.tG13Z0QVOfTavJ5tG3mw99Uu43wZx5sdj1Ai8WtjF_g';  // Use the Direct Line Token you have
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
-
+//https://749c68eb5ed1e17db4a3057378c8bd.d7.environment.api.powerplatform.com/powervirtualagents/botsbyschema/crc92_intelligentOperations/directline/token?api-version=2022-03-01-preview
 // Start a conversation with the bot using the Direct Line API
+// https://directline.botframework.com/v3/directline/conversations
+// A-oSxjR5Ll4.DXNUlIYP2kLrho6gdqg3f-cC-lHvUafbjPy4PoINaTE
 async function startConversation() {
     const response = await fetch('https://directline.botframework.com/v3/directline/conversations', {
         method: 'POST',
