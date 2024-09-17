@@ -7,7 +7,7 @@ const twilio = require('twilio');
 // const accountSid = 'your_twilio_account_sid';
 // const authToken = 'your_twilio_auth_token';
 const accountSid = 'ACf62d2624419023474faa114a33840e8b';
-const authToken = '13ade1dcc7ec0e72092955f8ebfc75a2';
+const authToken = '10906b4340d31c1a8cdc0df94c086950';
 const client = twilio(accountSid, authToken);
 
 // Direct Line Token for Microsoft Bot
