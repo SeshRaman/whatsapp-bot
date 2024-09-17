@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // https://directline.botframework.com/v3/directline/conversations
 // A-oSxjR5Ll4.DXNUlIYP2kLrho6gdqg3f-cC-lHvUafbjPy4PoINaTE
 async function startConversation() {
-    const response = await fetch('https://directline.botframework.com/v3/directline/conversations', {
+    const response = await fetch('https://749c68eb5ed1e17db4a3057378c8bd.d7.environment.api.powerplatform.com/powervirtualagents/botsbyschema/crc92_intelligentOperations/directline/token?api-version=2022-03-01-preview', {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${directLineToken}`,
@@ -33,7 +33,7 @@ async function startConversation() {
 
 // Send a message to the bot
 async function sendMessage(conversationId, messageText) {
-    const response = await fetch(`https://directline.botframework.com/v3/directline/conversations/${conversationId}/activities`, {
+    const response = await fetch(`https://749c68eb5ed1e17db4a3057378c8bd.d7.environment.api.powerplatform.com/powervirtualagents/botsbyschema/crc92_intelligentOperations/directline/token?api-version=2022-03-01-preview`, {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${directLineToken}`,
