@@ -76,18 +76,19 @@ app.post('/whatsapp', async (req, res) => {
     // Poll for the bot's response
     setTimeout(async () => {
         const activities = await getBotResponses(conversationId);
-        const botResponses = activities.filter(activity => activity.from.id !== 'whatsapp_user'); // Filter out user messages
+        console.log(activities) 
+       // const botResponses = activities.filter(activity => activity.from.id !== 'whatsapp_user'); // Filter out user messages
 
-        if (botResponses.length > 0) {
-            const botReply = botResponses[botResponses.length - 1].text;  // Get the last bot response
+    //    if (botResponses.length > 0) {
+     //       const botReply = botResponses[botResponses.length - 1].text;  // Get the last bot response
 
             // Send the bot's reply back to the user on WhatsApp
             client.messages.create({
                 from: 'whatsapp:+12138949311', // Twilio sandbox or approved WhatsApp number
                 to: userNumber,                // User's WhatsApp number
-                body: botReply
+                body: activities
             }).then(message => console.log(`Message sent with SID: ${message.sid}`));
-        }
+       // }
     }, 2000); // Poll after 2 seconds to allow bot processing
 
     res.sendStatus(200);  // Respond to Twilio to acknowledge receipt
