@@ -49,7 +49,7 @@ async function sendMessage(conversationId, messageText) {
         url: `https://directline.botframework.com//v3/directline/conversations/${conversationId}/activities`,
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer QqCmcC1BYAM.DW5PbBsQorF2JmQXXJOyrJgskQ56lOYIN1xf2QhA2nI'
+            'Authorization': 'Bearer ${directLineToken}'
         },
         data: data
     };
