@@ -174,12 +174,12 @@ app.post('/whatsapp', async (req, res) => {
         }
     }, 15000); // Poll after 15 seconds to allow bot processing
 
-    res.sendStatus(200);  // Respond to Twilio to acknowledge receipt
+    //res.sendStatus(200);  // Respond to Twilio to acknowledge receipt
 });
 
 
 app.get('/', (req, res) => {
-    res.sendStatus(200);
+    //res.sendStatus(200);
 })
 // Start the Express server on port 3000
 app.listen(3000, () => {
