@@ -5,11 +5,11 @@ const twilio = require('twilio');
 var request = require('request');
 const axios = require('axios');
 
- 
-let conversationId = 'ICyEFjsWLiT2Gqnef2v0Yq-us';
+
+let conversationId = '1r6jizmmZxN3r2hLX2W9Bp-in';
 const directLineToken = 'yzZJrsU3OUA.V99G5UCiB9R00kGx2tZaWHFGXCwjQGbr_STSOXIgupI';  // Use the Direct Line Token you have
-const accountSid = 'ACf62d2624419023474faa114a33840e8b';
-const authToken = '10906b4340d31c1a8cdc0df94c086950';
+const accountSid = 'ACb1bb9c97453b06f952e5051c43d69f5b';
+const authToken = '20ae11fb1f3d13c9fe98010bffcc81d1';
 const client = twilio(accountSid, authToken);
 
 const app = express();
@@ -49,7 +49,7 @@ async function sendMessage(conversationId, messageText) {
         url: `https://directline.botframework.com//v3/directline/conversations/${conversationId}/activities`,
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer ${directLineToken}'
+            'Authorization': `Bearer ${directLineToken}`
         },
         data: data
     };
