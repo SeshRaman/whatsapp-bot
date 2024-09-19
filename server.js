@@ -175,7 +175,7 @@ app.post('/whatsapp', async (req, res) => {
     }, 15000); // Poll after 15 seconds to allow bot processing
 
     //res.sendStatus(200);  // Respond to Twilio to acknowledge receipt
-    res.send(new Buffer('Please wait while i get the response'));
+    //res.send(new Buffer('Please wait while i get the response'));
 });
 
 
